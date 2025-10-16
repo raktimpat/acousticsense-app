@@ -1,0 +1,6 @@
+[core]
+    remote = origin
+['remote "myremote"']
+    url = gs://acousticsense-dvc-storage-67792/dvc
+['remote "origin"']
+    url = gs://acousticsense-dvc-storage-67792/dvc

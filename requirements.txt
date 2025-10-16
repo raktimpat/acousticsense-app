@@ -1,0 +1,16 @@
+torch
+torchaudio
+transformers
+librosa
+datasets
+evaluate
+fastapi
+uvicorn
+python-multipart
+dvc[gcs]
+gradio
+google-cloud-storage
+soundfile
+pandas
+tqdm
+

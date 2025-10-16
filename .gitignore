@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+.venv/
+
+# Data folders (tracked by DVC, not Git)
+data/
+
+# DVC cache
+.dvc/cache
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# --- CRITICAL FOR THIS PROJECT ---
+# Ignore all training results and model artifacts
+results/
+best_model/
+

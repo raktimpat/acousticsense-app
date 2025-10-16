@@ -6,7 +6,7 @@ import numpy as np
 import soundfile as sf
 import io
 from transformers import AutoFeatureExtractor, ASTForAudioClassification
-
+import os
 # --- Model Loading Logic (from the old main.py) ---
 MODEL_PATH = "./best_model"
 CONFIDENCE_THRESHOLD = 0.50 # 50%
@@ -83,4 +83,7 @@ with gr.Blocks(theme=gr.themes.Soft()) as demo:
 # --- Launch Command for Cloud Run ---
 if __name__ == "__main__":
     # The server_name="0.0.0.0" is crucial for Docker
-    demo.launch(server_name="0.0.0.0", server_port=7860)
+    # Most cloud services provide the port they expect the app to listen on via the PORT environment variable.
+    # We'll use that, and default to 8080 if it's not set.
+    server_port = int(os.environ.get('PORT', 8080))
+    demo.launch(server_name="0.0.0.0", server_port=server_port)

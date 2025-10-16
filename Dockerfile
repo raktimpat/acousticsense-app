@@ -13,9 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY main.py .
 COPY ./best_model ./best_model
 
-# Expose the port Gradio will run on
-EXPOSE 7860
+# Expose the port Gradio will run on. This should match the default in main.py
+EXPOSE 8080
 
 # The command to start the Gradio application
 CMD ["python", "main.py"]
-              
